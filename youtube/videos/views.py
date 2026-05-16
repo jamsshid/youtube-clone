@@ -14,10 +14,26 @@ import os
 
 def imagekit_auth(request):
     from .imagekit_client import get_imagekit_client
+    import hashlib
+    import hmac
+    import time
+    import os
 
-    client = get_imagekit_client()
-    auth_params = client.get_authentication_parameters()
-    return JsonResponse(auth_params)
+    private_key = os.environ.get("IMAGEKIT_PRIVATE_KEY", "")
+    token = os.urandom(16).hex()
+    expire = int(time.time()) + 3600
+
+    signature = hmac.new(
+        private_key.encode(), f"{token}{expire}".encode(), hashlib.sha1
+    ).hexdigest()
+
+    return JsonResponse(
+        {
+            "token": token,
+            "expire": expire,
+            "signature": signature,
+        }
+    )
 
 
 def video_detail(request, video_id):
