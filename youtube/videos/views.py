@@ -9,17 +9,14 @@ from .imagekit_client import (
     upload_thumbnail,
     delete_video as delete_video_from_imagekit,
 )
-from imagekitio import ImageKit
 import os
 
 
 def imagekit_auth(request):
-    imagekit = ImageKit(
-        private_key=os.environ.get("IMAGEKIT_PRIVATE_KEY"),
-        public_key=os.environ.get("IMAGEKIT_PUBLIC_KEY"),
-        url_endpoint=os.environ.get("IMAGEKIT_URL_ENDPOINT"),
-    )
-    auth_params = imagekit.get_authentication_parameters()
+    from .imagekit_client import get_imagekit_client
+
+    client = get_imagekit_client()
+    auth_params = client.get_authentication_parameters()
     return JsonResponse(auth_params)
 
 
