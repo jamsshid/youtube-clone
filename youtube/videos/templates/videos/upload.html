@@ -68,8 +68,7 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="https://unpkg.com/imagekitio-javascript/dist/imagekit.js"></script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/imagekitio-javascript@latest/dist/imagekit.js"></script>
 const $ = id => document.getElementById(id);
 
 const IMAGEKIT_PUBLIC_KEY = "{{ imagekit_public_key }}";
