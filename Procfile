@@ -1,1 +1,1 @@
-web: uv run gunicorn youtube.wsgi:application
+web: uv run gunicorn --chdir youtube youtube.wsgi:application
