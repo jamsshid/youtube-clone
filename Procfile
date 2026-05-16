@@ -1,0 +1,1 @@
+web: uv run gunicorn youtube.wsgi:application

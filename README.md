@@ -22,12 +22,11 @@ This project replicates the core video-sharing experience of YouTube, including 
 - **Authenticated users** can upload videos, like/dislike, and manage their channel
 - **Only the video author** can delete their own videos
 
-## 🛠️ Tech Stack
-
-### Backend
-- **Python** 3.10+
-- **Django** Framework
-- Django ORM
+## Tech Stack
+- **Backend**: Django 6.0
+- **Database**: PostgreSQL
+- **Media Storage**: AWS S3 + ImageKit (video streaming & CDN)
+- **Auth**: Django built-in authentication
 
 ### Frontend
 - **HTML**

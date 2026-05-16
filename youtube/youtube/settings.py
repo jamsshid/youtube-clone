@@ -27,10 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-fallback-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 
 # Application definition
 
@@ -137,7 +135,7 @@ LOGIN_URL = "/accounts/login/"
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 FILE_UPLOAD_MAX_MEMORY_SIZE = 50 * 1024 * 1024
 
-#S3 Settings
+# S3 Settings
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
