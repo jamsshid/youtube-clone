@@ -4,7 +4,7 @@ A fully functional YouTube clone built with **Python Django** (backend) and **HT
 
 This project replicates the core video-sharing experience of YouTube, including video streaming, uploading, user authentication, and channel management.
 
-![Project Banner](img_6.png)
+![Project Banner](data/images/img_6.png)
 
 ## ✨ Features
 
@@ -105,22 +105,22 @@ youtube-clone/
 
 ### 📸 Screenshots
 ## Homepage
-![img.png](img.png)
+![img.png](data/images/img.png)
 
 ## Video Watch Page
-![img_1.png](img_1.png)
+![img_1.png](data/images/img_1.png)
 
 ## Upload Page
-![img_2.png](img_2.png)
+![img_2.png](data/images/img_2.png)
 
 ## Channel Page
-![img_3.png](img_3.png)
+![img_3.png](data/images/img_3.png)
 
 ## Register Page
-![img_4.png](img_4.png)
+![img_4.png](data/images/img_4.png)
 
 ## Login Page
-![img_5.png](img_5.png)
+![img_5.png](data/images/img_5.png)
 
 ### 🔮 Future Enhancements
 - Comments and replies system
