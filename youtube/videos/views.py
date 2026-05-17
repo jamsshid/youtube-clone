@@ -21,7 +21,7 @@ def imagekit_auth(request):
 
     private_key = os.environ.get("IMAGEKIT_PRIVATE_KEY", "")
     token = os.urandom(16).hex()
-    expire = int(time.time()) + 3600
+    expire = int(time.time()) + 3000
 
     signature = hmac.new(
         private_key.encode(), f"{token}{expire}".encode(), hashlib.sha1

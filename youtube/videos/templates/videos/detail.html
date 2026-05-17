@@ -62,7 +62,9 @@ const videoError = document.getElementById("video-error")
 const streamingUrl = '{{ video.streaming_url }}'
 const fallbackUrl = '{{ video.optimized_url }}'
 
-if (Hls.isSupported()) {
+const isHls = streamingUrl.includes('.m3u8')
+
+if (isHls && Hls.isSupported()) {
     const hls = new Hls({
         startLevel: -1,
         capLevelToPlayerSize: true
@@ -70,11 +72,11 @@ if (Hls.isSupported()) {
     hls.loadSource(streamingUrl)
     hls.attachMedia(videoPlayer)
     hls.on(Hls.Events.ERROR, (event, data) => {
-        if (data.datal) {
+        if (data.fatal) {
             videoPlayer.src = fallbackUrl
         }
     })
-} else if (videoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
+} else if (isHls && videoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
     videoPlayer.src = streamingUrl
 } else {
     videoPlayer.src = fallbackUrl
