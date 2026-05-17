@@ -99,7 +99,7 @@ function deleteVideo(videoId) {
 
 function vote(videoId, voteType) {
     {% if not user.is_authenticated %}
-    window.location.href = '{% url "accounts:login"%}'
+    window.location.href = '{% url "accounts:login "%}'
     return
     {% endif %}
 

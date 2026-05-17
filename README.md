@@ -4,7 +4,7 @@ A fully functional YouTube clone built with **Python Django** (backend) and **HT
 
 This project replicates the core video-sharing experience of YouTube, including video streaming, uploading, user authentication, and channel management.
 
-![Project Banner](data/images/img_6.png)
+![Project Banner](img_6.png)
 
 ## ✨ Features
 
@@ -22,11 +22,12 @@ This project replicates the core video-sharing experience of YouTube, including 
 - **Authenticated users** can upload videos, like/dislike, and manage their channel
 - **Only the video author** can delete their own videos
 
-## Tech Stack
-- **Backend**: Django 6.0
-- **Database**: PostgreSQL
-- **Media Storage**: AWS S3 + ImageKit (video streaming & CDN)
-- **Auth**: Django built-in authentication
+## 🛠️ Tech Stack
+
+### Backend
+- **Python** 3.10+
+- **Django** Framework
+- Django ORM
 
 ### Frontend
 - **HTML**
@@ -104,22 +105,22 @@ youtube-clone/
 
 ### 📸 Screenshots
 ## Homepage
-![img.png](data/images/img.png)
+![img.png](img.png)
 
 ## Video Watch Page
-![img_1.png](data/images/img_1.png)
+![img_1.png](img_1.png)
 
 ## Upload Page
-![img_2.png](data/images/img_2.png)
+![img_2.png](img_2.png)
 
 ## Channel Page
-![img_3.png](data/images/img_3.png)
+![img_3.png](img_3.png)
 
 ## Register Page
-![img_4.png](data/images/img_4.png)
+![img_4.png](img_4.png)
 
 ## Login Page
-![img_5.png](data/images/img_5.png)
+![img_5.png](img_5.png)
 
 ### 🔮 Future Enhancements
 - Comments and replies system
